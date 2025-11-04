@@ -9,11 +9,17 @@ export const metadata: Metadata = {
   description: 'Clínica especializada en reumatología. Tratamiento de artritis, lupus, fibromialgia y otras enfermedades reumáticas. Atención profesional y personalizada.',
   keywords: 'reumatología, artritis, lupus, fibromialgia, clínica reumatológica, especialista en reumatología, enfermedades reumáticas, tratamiento artritis',
   authors: [{ name: 'Clínica Reumatológica' }],
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
   openGraph: {
     title: 'Clínica Reumatológica - Especialistas en Reumatología',
     description: 'Clínica especializada en reumatología. Tratamiento de artritis, lupus, fibromialgia y otras enfermedades reumáticas.',
     type: 'website',
     locale: 'es_ES',
+    images: ['/logo.png'],
   },
   robots: {
     index: true,

@@ -507,17 +507,20 @@ export default function Home() {
                 name="Dr. Jorge Pérez"
                 specialty="Reumatólogo"
                 description="Director del Programa de Reumatología. Especialista en enfermedades autoinmunes sistémicas y artritis reumatoide."
+                image="/doctors/jorge-perez.jpg"
                 isDirector={true}
               />
               <DoctorCard 
                 name="Dr. Antonio Iglesias"
                 specialty="Reumatólogo"
                 description="Especialista en enfermedades reumáticas con amplia experiencia en el diagnóstico y tratamiento de patologías autoinmunes."
+                image="/doctors/antonio-iglesias.jpg"
               />
               <DoctorCard 
                 name="Dr. Jesús Godoy"
                 specialty="Reumatólogo"
                 description="Experto en el manejo integral de enfermedades del aparato locomotor y enfermedades reumáticas crónicas."
+                image="/doctors/jesus-godoy.jpg"
               />
             </div>
           </div>
@@ -779,7 +782,7 @@ function PopulationCard({ title, description }: { title: string; description: st
 }
 
 // Component: DoctorCard
-function DoctorCard({ name, specialty, description, isDirector }: { name: string; specialty: string; description: string; isDirector?: boolean }) {
+function DoctorCard({ name, specialty, description, image, isDirector }: { name: string; specialty: string; description: string; image: string; isDirector?: boolean }) {
   return (
     <div className="bg-gray-50 p-8 rounded-xl text-center hover:shadow-lg transition-shadow relative">
       {isDirector && (
@@ -787,8 +790,14 @@ function DoctorCard({ name, specialty, description, isDirector }: { name: string
           Director
         </div>
       )}
-      <div className={`w-24 h-24 ${isDirector ? 'bg-blue-700' : 'bg-blue-600'} rounded-full mx-auto mb-4 flex items-center justify-center`}>
-        <FaUserMd className="text-4xl text-white" />
+      <div className="relative w-32 h-32 mx-auto mb-4">
+        <Image 
+          src={image}
+          alt={name}
+          width={128}
+          height={128}
+          className="rounded-full object-cover w-full h-full border-4 border-blue-600"
+        />
       </div>
       <h3 className="text-xl font-bold mb-2 text-gray-800">{name}</h3>
       <p className="text-blue-600 font-medium mb-3">{specialty}</p>
