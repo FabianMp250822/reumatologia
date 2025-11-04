@@ -166,7 +166,7 @@ export default function Home() {
                 "url": "https://reumatologia.vercel.app",
                 "logo": "https://reumatologia.vercel.app/logo.png",
                 "image": "https://reumatologia.vercel.app/logo.png",
-                "telephone": "+57-5-555-5555",
+                "telephone": "+57-321-333-9684",
                 "address": {
                   "@type": "PostalAddress",
                   "addressLocality": "Barranquilla",
@@ -690,8 +690,8 @@ export default function Home() {
               <ContactCard 
                 icon={<FaWhatsapp className="text-4xl text-green-500" />}
                 title="WhatsApp"
-                info="+57 300 123 4567"
-                link="https://wa.me/573001234567"
+                info="+57 321 333 9684"
+                link="https://wa.me/573213339684"
               />
               <ContactCard 
                 icon={<FaEnvelope className="text-4xl text-blue-600" />}
@@ -771,7 +771,7 @@ export default function Home() {
 
       {/* Floating WhatsApp Button */}
       <a 
-        href="https://wa.me/573001234567" 
+        href="https://wa.me/573213339684" 
         target="_blank" 
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all hover:scale-110 z-50"
