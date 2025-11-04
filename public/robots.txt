@@ -1,0 +1,21 @@
+# robots.txt para Reumatología Clínica de la Costa
+# Permitir acceso completo a todos los bots de búsqueda
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Configuración específica para Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Configuración específica para Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Sitemap
+Sitemap: https://reumatologia.vercel.app/sitemap.xml

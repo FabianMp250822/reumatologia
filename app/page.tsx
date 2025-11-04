@@ -151,6 +151,118 @@ export default function Home() {
         </div>
       </section>
 
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "MedicalClinic",
+                "@id": "https://reumatologia.vercel.app/#organization",
+                "name": "Reumatología Clínica de la Costa",
+                "description": "Clínica especializada en reumatología, líder en el Caribe Colombiano en el tratamiento de enfermedades reumáticas y autoinmunes",
+                "url": "https://reumatologia.vercel.app",
+                "logo": "https://reumatologia.vercel.app/logo.png",
+                "image": "https://reumatologia.vercel.app/logo.png",
+                "telephone": "+57-5-555-5555",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Barranquilla",
+                  "addressRegion": "Atlántico",
+                  "addressCountry": "CO"
+                },
+                "medicalSpecialty": "Rheumatology",
+                "availableService": [
+                  {
+                    "@type": "MedicalProcedure",
+                    "name": "Tratamiento de Artritis Reumatoide"
+                  },
+                  {
+                    "@type": "MedicalProcedure",
+                    "name": "Tratamiento de Lupus Eritematoso"
+                  },
+                  {
+                    "@type": "MedicalProcedure",
+                    "name": "Tratamiento de Fibromialgia"
+                  },
+                  {
+                    "@type": "MedicalProcedure",
+                    "name": "Tratamiento de Gota"
+                  },
+                  {
+                    "@type": "MedicalProcedure",
+                    "name": "Tratamiento de Espondilitis"
+                  }
+                ]
+              },
+              {
+                "@type": "Physician",
+                "@id": "https://reumatologia.vercel.app/#jorge-perez",
+                "name": "Dr. Jorge Pérez",
+                "image": "https://reumatologia.vercel.app/doctors/jorge-perez.jpg",
+                "jobTitle": "Director del Programa de Reumatología",
+                "description": "Especialista en enfermedades autoinmunes sistémicas y artritis reumatoide",
+                "medicalSpecialty": "Rheumatology",
+                "memberOf": {
+                  "@id": "https://reumatologia.vercel.app/#organization"
+                }
+              },
+              {
+                "@type": "Physician",
+                "@id": "https://reumatologia.vercel.app/#antonio-iglesias",
+                "name": "Dr. Antonio Iglesias",
+                "image": "https://reumatologia.vercel.app/doctors/antonio-iglesias.jpg",
+                "jobTitle": "Reumatólogo",
+                "description": "Especialista en enfermedades reumáticas con amplia experiencia en el diagnóstico y tratamiento de patologías autoinmunes",
+                "medicalSpecialty": "Rheumatology",
+                "memberOf": {
+                  "@id": "https://reumatologia.vercel.app/#organization"
+                }
+              },
+              {
+                "@type": "Physician",
+                "@id": "https://reumatologia.vercel.app/#jesus-godoy",
+                "name": "Dr. Jesús Godoy",
+                "image": "https://reumatologia.vercel.app/doctors/jesus-godoy.jpg",
+                "jobTitle": "Reumatólogo",
+                "description": "Experto en el manejo integral de enfermedades del aparato locomotor y enfermedades reumáticas crónicas",
+                "medicalSpecialty": "Rheumatology",
+                "memberOf": {
+                  "@id": "https://reumatologia.vercel.app/#organization"
+                }
+              },
+              {
+                "@type": "WebSite",
+                "@id": "https://reumatologia.vercel.app/#website",
+                "url": "https://reumatologia.vercel.app",
+                "name": "Reumatología Clínica de la Costa",
+                "description": "Portal de servicios integrales de reumatología",
+                "publisher": {
+                  "@id": "https://reumatologia.vercel.app/#organization"
+                },
+                "inLanguage": "es-CO"
+              },
+              {
+                "@type": "WebPage",
+                "@id": "https://reumatologia.vercel.app/#webpage",
+                "url": "https://reumatologia.vercel.app",
+                "name": "Reumatología Clínica de la Costa | Especialistas en Enfermedades Reumáticas",
+                "description": "Líderes en Reumatología del Caribe Colombiano. Tratamiento especializado de artritis reumatoide, lupus, fibromialgia y enfermedades autoinmunes",
+                "isPartOf": {
+                  "@id": "https://reumatologia.vercel.app/#website"
+                },
+                "about": {
+                  "@id": "https://reumatologia.vercel.app/#organization"
+                },
+                "inLanguage": "es-CO"
+              }
+            ]
+          })
+        }}
+      />
+
       {/* ¿Qué es la Reumatología? */}
       <section id="reumatologia" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
